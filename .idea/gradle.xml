@@ -9,6 +9,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Airline" />
+            <option value="$PROJECT_DIR$/CompletableFuturesExercises" />
           </set>
         </option>
       </GradleProjectSettings>

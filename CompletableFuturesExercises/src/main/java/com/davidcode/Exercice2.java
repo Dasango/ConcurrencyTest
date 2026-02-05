@@ -95,6 +95,7 @@ public class Exercice2 {
                 System.out.println("Fetching price for: " + stock + " on " + Thread.currentThread().getName());
                 sleep(new Random().nextInt(3000, 10000));
                 double price = new Random().nextDouble(100, 500);
+                System.out.println("Fetched on " + Thread.currentThread().getName());
                 return price;
             }, ex).exceptionally(e -> {
                 System.err.println("Error fetching " + stock + ", counting as 0.0");

@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/Airline" />
             <option value="$PROJECT_DIR$/CompletableFuturesExercises" />
             <option value="$PROJECT_DIR$/Libray" />
+            <option value="$PROJECT_DIR$/Store" />
           </set>
         </option>
       </GradleProjectSettings>

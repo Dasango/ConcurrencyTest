@@ -1,0 +1,12 @@
+create table appusers (id integer not null, version integer, created timestamp(6), name varchar(32), passwd varchar(32), primary key (id));
+create table claves_primarias (next_val bigint, sequence_name varchar(255) not null, primary key (sequence_name));
+insert into claves_primarias(sequence_name, next_val) values ('Usuario',0);
+insert into claves_primarias(sequence_name, next_val) values ('Task',0);
+insert into claves_primarias(sequence_name, next_val) values ('Project',0);
+insert into claves_primarias(sequence_name, next_val) values ('Usuario',0);
+insert into claves_primarias(sequence_name, next_val) values ('Task',0);
+insert into claves_primarias(sequence_name, next_val) values ('Project',0);
+create table Project (id integer not null, version integer, created timestamp(6), name varchar(32), primary key (id));
+create table Task (id integer not null, project_id integer, user_id integer, version integer, completed timestamp(6), created timestamp(6), title varchar(64) not null, description varchar(128), priority varchar(255) check ((priority in ('SEVERE'))), primary key (id));
+alter table if exists Task add constraint FKkkcat6aybe3nbvhc54unstxm6 foreign key (project_id) references Project;
+alter table if exists Task add constraint FKq4yq0eqypkxoa18i1vexrjb5o foreign key (user_id) references appusers;

@@ -26,7 +26,7 @@ public class Task {
     @Column(length = 64, nullable = false)
     private String title;
 
-    private LocalDateTime completed;
+    private LocalDateTime complete;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
@@ -39,4 +39,8 @@ public class Task {
 
     @Enumerated(EnumType.STRING)
     private Priority priority;
+
+    public static Task of(String[] it){
+        return  null;
+    }
 }

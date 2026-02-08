@@ -20,6 +20,7 @@ public class ExecutorConfig {
     }
 
     @Produces
+    @ApplicationScoped
     public ExecutorService getExecutorService(){
         return this.executorService;
     }

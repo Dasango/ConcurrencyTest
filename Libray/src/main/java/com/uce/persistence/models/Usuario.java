@@ -26,4 +26,8 @@ public class Usuario {
     private List<Task> tasks;
     private LocalDateTime created;
     private Integer version;
+
+    public static Usuario of(String[] it){
+        return  null;
+    }
 }

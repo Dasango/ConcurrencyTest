@@ -26,4 +26,9 @@ public class Project {
     private String name;
 
     private Integer version;
+
+
+    public static Project of(String[] it){
+        return  null;
+    }
 }

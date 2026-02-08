@@ -15,7 +15,7 @@ public class BaseRepository<CLASS, ID>  implements IBaseRepository<CLASS, ID>  {
 
     private ExecutorService executorService;
     private EntityManagerFactory entityManagerFactory;
-    private Class<CLASS> clazz;
+    private final Class<CLASS> clazz;
 
     public BaseRepository(ExecutorService executorService,
                           EntityManagerFactory entityManagerFactory,

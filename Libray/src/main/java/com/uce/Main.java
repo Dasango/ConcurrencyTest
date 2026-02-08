@@ -9,12 +9,13 @@ import java.util.logging.Logger;
 
 public class Main {
     public static void main(String[] args) {
-        //Logger.getLogger("").setLevel(Level.SEVERE);
+        Logger.getLogger("").setLevel(Level.SEVERE);
         try(SeContainer container = SeContainerInitializer.newInstance().initialize()){
-
             jakarta.persistence.Persistence.createEntityManagerFactory("PU")
                     .createEntityManager().find(Project.class,1);
-            System.out.println("Compila");
+            System.out.println("Compila no da tiempo a probar nmms");
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }

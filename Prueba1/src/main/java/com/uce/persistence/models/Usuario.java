@@ -14,8 +14,8 @@ import java.util.List;
 @Builder
 public class Usuario {
     @Id
-    @TableGenerator(name = "claves_primarias", table = "claves_primarias", pkColumnValue = "project")
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "claves_primarias")
+    @TableGenerator(name = "gen_user", table = "claves_primarias", pkColumnValue = "users")
+    @GeneratedValue(strategy = GenerationType.TABLE, generator = "gen_user")
     private Integer id;
     @Column(length = 32)
     private String passwd;

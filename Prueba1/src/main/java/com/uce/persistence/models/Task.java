@@ -13,8 +13,8 @@ import java.time.LocalDateTime;
 @Builder
 public class Task {
     @Id
-    @TableGenerator(name = "claves_primarias", table = "claves_primarias", pkColumnValue = "project")
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "claves_primarias")
+    @TableGenerator(name = "gen_tasks", table = "claves_primarias", pkColumnValue = "tasks")
+    @GeneratedValue(strategy = GenerationType.TABLE, generator = "gen_tasks")
     private Integer id;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "project_id")

@@ -14,8 +14,8 @@ import java.util.List;
 @Builder
 public class Project {
     @Id
-    @TableGenerator(name = "claves_primarias", table = "claves_primarias", pkColumnValue = "project")
-    @GeneratedValue(strategy = GenerationType.TABLE, generator = "claves_primarias")
+    @TableGenerator(name = "gen_pr", table = "claves_primarias", pkColumnValue = "project")
+    @GeneratedValue(strategy = GenerationType.TABLE, generator = "gen_pr")
     private Integer id;
     @OneToMany(mappedBy = "project", fetch = FetchType.LAZY)
     private List<Task> tasks;

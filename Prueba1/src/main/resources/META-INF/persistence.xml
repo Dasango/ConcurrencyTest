@@ -1,0 +1,19 @@
+
+<persistence>
+
+    <persistence-unit name="PU">
+        <class>com.uce.persistence.models.Project</class>
+        <class>com.uce.persistence.models.Usuario</class>
+        <class>com.uce.persistence.models.Task</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/test1"/>
+            <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+            <property name="jakarta.persistence.jdbc.password" value="root"/>
+
+            <property name="jakarta.persistence.schema-generation.scripts.action" value="create"/>
+            <property name="jakarta.persistence.schema-generation.scripts.create-target" value="create.sql"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

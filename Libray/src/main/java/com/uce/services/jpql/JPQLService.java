@@ -10,12 +10,13 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @ApplicationScoped
-public class JPQLService {
+public class JPQLService implements IJPQLService {
     private EntityManagerFactory emf;
     @Inject
     public JPQLService(EntityManagerFactory emf) {
         this.emf = emf;
     }
+    @Override
     public List<LiteralUnoDTO> getLiteralUno(){
         String jpql = "SELECT " +
                 " u.name," +
@@ -31,6 +32,7 @@ public class JPQLService {
         });
     }
 
+    @Override
     public List<LiteralDosDTO.TaskSummary> getLiteralDos(){
         String jpql = "SELECT " +
                 " t.title, " +

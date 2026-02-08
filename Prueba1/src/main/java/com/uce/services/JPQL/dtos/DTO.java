@@ -1,4 +1,4 @@
-package com.uce.services.JPQL;
+package com.uce.services.JPQL.dtos;
 
 import java.math.BigDecimal;
 

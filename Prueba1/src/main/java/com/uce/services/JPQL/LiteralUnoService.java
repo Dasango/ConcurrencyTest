@@ -1,21 +1,22 @@
 package com.uce.services.JPQL;
 
+import com.uce.services.JPQL.dtos.DTO;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManagerFactory;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 
 @ApplicationScoped
-public class LiteralUnoService {
+public class LiteralUnoService implements ILiteralUnoService {
     @Inject
     private EntityManagerFactory emf;
     @Inject
     private ExecutorService executorService;
 
 
+    @Override
     public List<DTO> get(){
         String jpql = " SELECT u.name, COUNT(t)" +
                 " FROM Usuario u" +

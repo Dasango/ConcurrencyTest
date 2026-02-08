@@ -1,21 +1,22 @@
 package com.uce.services.JPQL;
 
+import com.uce.services.JPQL.dtos.TaskSummary;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManagerFactory;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 
 @ApplicationScoped
-public class LiteralDosService {
+public class LiteralDosService implements ILiteralDosService {
     @Inject
     private EntityManagerFactory emf;
     @Inject
     private ExecutorService executorService;
 
+    @Override
     public List<TaskSummary> get(){
         String jpql = " SELECT t.title, " +
                 " p.name," +

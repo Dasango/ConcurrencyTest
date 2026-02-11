@@ -1,4 +1,4 @@
-package com.uce;
+package com.uce.persistence.models;
 
 import jakarta.persistence.*;
 import lombok.*;

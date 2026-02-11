@@ -1,10 +1,8 @@
-package com.uce;
+package com.uce.persistence.models;
 
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity

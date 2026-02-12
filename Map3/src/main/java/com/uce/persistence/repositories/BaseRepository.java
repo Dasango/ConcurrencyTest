@@ -30,13 +30,12 @@ public class BaseRepository<CLASS, ID> implements IBaseRepository<CLASS, ID> {
 
     @Override
     public CLASS update(CLASS obj){
-        this.emf.runInTransaction(em -> em.merge(obj));
-        return obj;
+        return this.emf.callInTransaction(em -> em.merge(obj));
     }
 
     @Override
-    public CLASS findById(CLASS obj){
-        return this.emf.callInTransaction(em -> em.find(clazz,obj));
+    public CLASS findById(ID id){
+        return this.emf.callInTransaction(em -> em.find(clazz,id));
     }
 
 }

@@ -7,5 +7,5 @@ public interface IBaseRepository<CLASS, ID> {
 
     CLASS update(CLASS obj);
 
-    CLASS findById(CLASS obj);
+    CLASS findById(ID id);
 }
